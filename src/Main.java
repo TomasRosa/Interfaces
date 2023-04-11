@@ -101,6 +101,29 @@ public class Main
     }
     public static void ejercicio5 ()
     {
+        Scanner scan = new Scanner(System.in);
+
+        Pila pilita = new Pila();
+        System.out.println("PROBANDO METODOS DE PILA");
+        pilita.cargarPilaAutomaticamente();
+        pilita.mostrar();
+
+        System.out.println("Pila vacia? " + pilita.estaVacia());
+        int tope = pilita.primero();
+        System.out.println("Tope: " + tope);
+        System.out.println("Pilita luego de tope: ");
+        pilita.mostrar();
+
+        int extraer = pilita.extraer();
+
+        System.out.println("Pila luego de extraer: ");
+        pilita.mostrar();
+
+        System.out.println("Ingrese numero a añadir. ");
+        int numero = scan.nextInt();
+        pilita.añadir(numero);
+        System.out.println("Pila con numero añadido: ");
+        pilita.mostrar();
 
     }
 }

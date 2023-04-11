@@ -35,45 +35,41 @@ public class Pila implements ColeccionInterfaz
     @Override
     public int extraer()
     {
-        int ultimo = 99999;
-
-        if(estaVacia() == false)
+        int ultimo = 0;
+        if (!estaVacia())
         {
-            for(int i = 0; i < this.pila.size(); i++)
-            {
-                ultimo = this.pila.get(i);
-            }
-            this.pila.remove(ultimo);
-
-        }
-        else
+            ultimo = this.pila.get(this.pila.size() - 1);
+            this.pila.remove(this.pila.size() - 1);
+        } else
         {
             System.out.println("No se puede extraer un elemento de una pila vacia.");
         }
-
         return ultimo;
-    }
 
+    }
     @Override
     public int primero()
     {
-        int ultimo = 999999;
-        if(estaVacia() == false)
-        {
-            for(int i = 0; i < this.pila.size(); i++)
-            {
-               ultimo = this.pila.get(i);
-            }
-        }
-        else
-        {
-            System.out.println("No se puede extraer un elemento de una pila vacia.");
+        int ultimo = 0;
+        if (!estaVacia()) {
+            ultimo = this.pila.get(this.pila.size() - 1);
+        } else {
+            System.out.println("No se puede obtener el primer elemento de una pila vacía.");
         }
         return ultimo;
     }
+
     @Override
     public void añadir(int numero)
     {
         this.pila.add(numero);
+    }
+    public void mostrar ()
+    {
+        for(int i = 0; i < this.pila.size(); i++)
+        {
+            System.out.println(this.pila.get(i));
+
+        }
     }
 }
