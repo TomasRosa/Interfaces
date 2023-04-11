@@ -18,6 +18,22 @@ public class Main
             case 2:
             {
                 ejercicio2();
+                break;
+            }
+            case 3:
+            {
+                ejercicio3();
+                break;
+            }
+            case 4:
+            {
+                ejercicio4();
+                break;
+            }
+            case 5:
+            {
+                ejercicio5();
+                break;
             }
         }
     }
@@ -49,5 +65,42 @@ public class Main
         double fin = matematica.fin();
 
         System.out.println("Num final: " + fin);
+    }
+    public static void ejercicio3 ()
+    {
+        Numero primerObjeto = new Numero(10);
+        Numero segundoObjeto = new Numero(9);
+
+        Boolean hola = primerObjeto.esIgual(segundoObjeto);
+        Boolean hola2 = primerObjeto.esMayor(segundoObjeto);
+        Boolean hola3 = primerObjeto.esMenor(segundoObjeto);
+
+        System.out.println("Primer objeto es igual a segundo objeto ? " + hola);
+        System.out.println("Primer objeto es mayor a segundo objeto ? " + hola2);
+        System.out.println("Primer objeto es menor a segundo objeto ? " + hola3);
+    }
+    public static void ejercicio4 ()
+    {
+        Libro librito = new Libro("El ave Fenix",2012);
+        Revista revistita = new Revista("Avon",2019);
+
+        System.out.println("Metodos de librito: ");
+        librito.toString();
+        System.out.println("Año de publicacion de el libro: " + librito.getAñoPublicacion());
+        System.out.println("Codigo del libro: " + librito.getCodigo());
+        System.out.println("Prestar libro: ");
+        librito.prestar();
+        System.out.println("Devolver libro: ");
+        librito.devolver();
+
+        System.out.println("Metodos revista: ");
+        revistita.toString();
+        System.out.println("Año de publicacion de la revista: " + revistita.getAñoPublicacion());
+        System.out.println("Codigo de la revista: " + revistita.getCodigo());
+
+    }
+    public static void ejercicio5 ()
+    {
+
     }
 }
