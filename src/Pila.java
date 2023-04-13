@@ -22,14 +22,7 @@ public class Pila implements ColeccionInterfaz
     @Override
     public boolean estaVacia()
     {
-        if(this.pila.get(0) == null)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return this.pila.size() == 0;
     }
 
     @Override

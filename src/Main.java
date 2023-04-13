@@ -35,6 +35,16 @@ public class Main
                 ejercicio5();
                 break;
             }
+            case 6:
+            {
+                ejercicio6();
+                break;
+            }
+            case 7:
+            {
+                ejercicio7();
+            }
+
         }
     }
     public static void ejercicio1 ()
@@ -124,6 +134,31 @@ public class Main
         pilita.añadir(numero);
         System.out.println("Pila con numero añadido: ");
         pilita.mostrar();
+    }
+    public static void ejercicio6 ()
+    {
+        PruebaPila prueba = new PruebaPila(); /// creo prueba pila q es donde tengo los metodos
+        Pila miPila = new Pila(); ///creo una pila que es objeto de tipo coleccionInterfaz
 
+        prueba.rellenar(miPila);
+        System.out.println("Elementos de la pila: ");
+        prueba.imprimirYVaciar(miPila);
+        System.out.println("Pila luego de ser vaciada: ");
+        miPila.mostrar();
+    }
+    public static void ejercicio7 ()
+    {
+        BarcoPasaje barcoPasaje = new BarcoPasaje(10);
+        PortaAvion barcoAvion = new PortaAvion(12,120);
+        Pesquero barcoPesquero = new Pesquero("Jenny",80,120);
+
+        barcoPasaje.alarma();
+        barcoPasaje.mensajeSocorro();
+        System.out.println("*************************");
+        barcoAvion.alarma();
+        barcoAvion.mensajeSocorro();
+        System.out.println("*************************");
+        barcoPesquero.alarma();
+        barcoPesquero.mensajeSocorro();
     }
 }
